@@ -5,14 +5,35 @@
 function moreAboutHome(address,distanceFromTown,hasNeighbours){
     return (typeof(address)+typeof(distanceFromTown)+typeof(hasNeighbours));
 }
+console.log(moreAboutHome("123 Main St", 10, true));
+
 //Trial 2:
 //Check if the data given is of the right type
-//parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
+// parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
+function moreAboutKaren(){
+    return(typeof(parents)+typeof(noOfSiblings)+typeof(isNuclearFamily))
+}
+
 
 //Trial 3:
 //Lily is suspicious about Karen's new friend
 //Karen tells her friend's age and even writes it down
 //Check which one those is not a number (NaN) and return that value
+function doesFriendExist(ageInText,ageInNumber){
+    if(isNaN(ageInText)){
+        return ageInText
+    }
+    else if(isNaN(ageInNumber)){
+        return ageInNumber
+    }
+    else{
+        return null
+
+    }
+
+}
+
+
 
 //Trial 4:
 //Lily gave Karen x sweets
@@ -20,6 +41,13 @@ function moreAboutHome(address,distanceFromTown,hasNeighbours){
 //On her way to the river, she ate another z sweets every n meters travelled
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
+function sweetTooth(TotalNoOfSweets,sweetsConsumedByKaren,sweetsConsumedInMeters,metersToTravel){
+    totalNoOfSweets-=sweetsConsumedByKaren+(sweetsConsumedInNMeters*metersToTravel);
+    totalNoOfSweets/=2;
+    return totalNoOfSweets
+
+
+}
 
 //Trial 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
